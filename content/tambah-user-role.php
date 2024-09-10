@@ -22,7 +22,7 @@ if (isset($_GET['edit'])) {
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
 
-    
+
     $edit = mysqli_query($koneksi, "SELECT * FROM user_levels WHERE id='$id'");
     $rowEdit = mysqli_fetch_assoc($edit);
     // print_r($id);

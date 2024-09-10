@@ -6,7 +6,7 @@ LEFT JOIN levels ON levels.id = user_levels.level_id
 WHERE user_id = '$user_id' ORDER BY user_levels.id DESC");
 ?>
 <div class="mb-3" align="right">
-    <a href="?pg=tambah-user-role&id_user=<?php echo urlencode( $user_id )?>" class="btn btn-primary">Tambah Role</a>
+    <a href="?pg=tambah-user-role&id_user=<?php echo urlencode($user_id) ?>" class="btn btn-primary">Tambah Role</a>
 </div>
 <table class="table table-bordered">
     <thead>
@@ -25,7 +25,7 @@ WHERE user_id = '$user_id' ORDER BY user_levels.id DESC");
                 <td><?php echo $rowUser['fullname'] ?></td>
                 <td><?php echo $rowUser['level_name'] ?></td>
                 <td>
-                    
+
                     <a href="?pg=tambah-user-role&edit=<?php echo $rowUser['id'] ?>" class="btn btn-success">Edit </a>
 
                     <a class="btn btn-danger" onclick="return confirm('Apakah anda yakin cuy menghapus data nih??')" href="?pg=tambah-user-role&delete=<?php echo $rowUser['id'] ?>">Delete</a>
